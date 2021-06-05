@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  max-width: 969px;
+  margin: 0 auto;
+  background: #FF5F6D;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+header img {
+  vertical-align: middle;
+  opacity: 0.8;
+}
+
+h1 {
+  font-family: 'SigmarOne', cursive;
+  color: #FF5F6D;
+}
+
+.about-para {
+  color: #FF5F6D;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2.5rem;
+  padding: 8rem 3rem;
+  opacity: 0.5;
+}
+
+.addSnap  {
+  padding: 0.5rem;
+  background-color: #FFC371;
+  color: #FF5F6D;
+  font-size: 1rem;
+  cursor: pointer;
+  border: transparent;
+  border-radius: 10px;
+}
+
+.snapbook-clr {
+  color: #FFC371;
+}
+
