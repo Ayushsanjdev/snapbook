@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Montserrat&family=Stint+Ultra+Condensed&display=swap');
 
 * {
   margin: 0;
@@ -7,7 +7,8 @@
 }
 
 .App {
-  max-width: 969px;
+  max-width: 80vw;
+  height: 100vw;
   margin: 0 auto;
   background: #FF5F6D;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
@@ -18,39 +19,66 @@
 header {
   display: flex;
   justify-content: space-between;
-  padding: 2em;
-}
-
-header img {
-  vertical-align: middle;
-  opacity: 0.8;
+  padding: 2rem;
 }
 
 h1 {
-  font-family: 'SigmarOne', cursive;
-  color: #FF5F6D;
-}
-
-.about-para {
-  color: #FF5F6D;
+  font-family: 'Odibee Sans', cursive;
+  color: #312f2f;
+  font-size: 3rem;
+  letter-spacing: 0.01em;
   text-align: center;
-  font-family: Montserrat;
-  font-size: 2.5rem;
-  padding: 8rem 3rem;
-  opacity: 0.5;
 }
 
-.addSnap  {
-  padding: 0.5rem;
-  background-color: #FFC371;
-  color: #FF5F6D;
-  font-size: 1rem;
+.githubBtn {
+  background: transparent;
+  border: None;
   cursor: pointer;
-  border: transparent;
+}
+
+.popupDiv {
+  max-width: 500px;
+  height: 520px;
   border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  text-align: center;
+  padding-top: 1rem;
+  margin: 5rem auto;
+  font-family: montserrat;
+  color: rgb(247, 247, 247);
 }
 
-.snapbook-clr {
-  color: #FFC371;
+.popupDiv p {
+  padding: 1rem;
+  font-size: larger;
 }
 
+.dropZone {
+  border: 2px dashed #f6f8fb5b;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+}
+
+.chooseBtn {
+  padding: 0.8rem;
+  background-color: #FFC371;
+  border: transparent;
+  border-radius: 5px;
+  font-family: montserrat;
+  font-weight: bold;
+  margin: 1rem 0rem;
+  cursor: pointer;
+}
+
+.chooseBtn:hover {
+  background-color: #FF5F6D;
+}
+
+footer {
+  text-align: center;
+  font-family: montserrat;
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
