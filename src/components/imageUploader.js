@@ -3,12 +3,14 @@ import React from 'react';
 const ImageUploader = ({snap, setSnap}) => {
 
   const handleChange = (e) => {
-    e.target.files && e.target.files[0] ? 
+    e.target.files ? 
     setSnap({
       image: URL.createObjectURL(e.target.files[0])
     }) 
-    : console.log("nothing there!");
+    : console.log("something broke");
   }
+
+
   return(
     <div className="popupDiv">
         <p>Upload Your Snap to snapbook</p>
@@ -21,7 +23,9 @@ const ImageUploader = ({snap, setSnap}) => {
             : "https://img.icons8.com/plasticine/250/000000/image.png"} alt="drop your img here" 
             className="uploadImage" />
           <br/>
+          {snap === null ? 
           <small>Drag & drop your image here</small>
+          : ""}
         </div>
 
         <small>or</small>
@@ -32,6 +36,8 @@ const ImageUploader = ({snap, setSnap}) => {
            id="files" type="file" accept=" image/* "
            onChange={handleChange} />
         Choose local Snap</label>
+        <br/>
+        <button className={snap !== null ? "uploadBtn" : "hideView"}>Upload Snap</button>
       </div>
   )
 }

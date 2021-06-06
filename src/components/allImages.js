@@ -3,7 +3,7 @@ import React from "react";
 const AllImages = ({snap}) => {
   return(
     <div className="imageGrid">
-      <img src={snap.image} alt={"uploaded images"} />
+      {/* <img src={snap.image} alt={snap.name} /> */}
     </div>
   )
 }

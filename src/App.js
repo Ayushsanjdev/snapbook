@@ -7,8 +7,8 @@ const App = () => {
 
   const [snap, setSnap] = useState(null);
 
-  const addSnapHandler = (e) => {
-    console.log(e.target.value);
+  const addSnapUploader = (e) => {
+    console.log(e.target.className);
   }
 
 
@@ -27,7 +27,7 @@ const App = () => {
           width="50px" />
         </button>
       </header>
-      <button className="addBtn" onClick={addSnapHandler}>Add Snap</button>
+      <button className="addBtn" onClick={addSnapUploader}>Add Snap</button>
       <ImageUploader
         snap={snap}
         setSnap={setSnap} />

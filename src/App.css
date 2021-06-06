@@ -114,3 +114,13 @@ input[type="file"] {
 .imageGrid img {
   width: 100%;
 }
+
+.uploadBtn {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  font-family: montserrat;
+  border-radius: 5px;
+  background-color: #FF5F6D;
+  border: transparent;
+  cursor: pointer;
+}
