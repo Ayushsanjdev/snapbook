@@ -6,14 +6,16 @@
   box-sizing: border-box;
 }
 
-.App {
-  max-width: 80vw;
-  height: 100vw;
-  margin: 0 auto;
-  background: #FF5F6D;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #FFC371, #FF5F6D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  background: #FF5F6D;  
+  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  
+  background: linear-gradient(to right, #FFC371, #FF5F6D);
+}
 
+.App {
+  max-width: 85vw;
+  margin: 0 auto; 
+  text-align: center;
 }
 
 header {
@@ -36,16 +38,41 @@ h1 {
   cursor: pointer;
 }
 
+.addBtn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: montserrat;
+  background-color: #FF5F6D;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #FFC371;
+  color: #000;
+}
+
+.hideView {
+  display: none;
+}
+
+.uploadImage {
+  max-width: 100%;
+}
+
 .popupDiv {
   max-width: 500px;
-  height: 520px;
+  height: auto;
   border-radius: 10px;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
   text-align: center;
-  padding-top: 1rem;
-  margin: 5rem auto;
+  padding: 2rem;
+  margin: 3rem auto;
   font-family: montserrat;
   color: rgb(247, 247, 247);
 }
@@ -61,24 +88,29 @@ h1 {
   padding: 1rem;
 }
 
-.chooseBtn {
-  padding: 0.8rem;
+input[type="file"] {
+  display: none;
+}
+
+.chooseFile {
+  padding: 0.5rem;
   background-color: #FFC371;
   border: transparent;
   border-radius: 5px;
   font-family: montserrat;
-  font-weight: bold;
-  margin: 1rem 0rem;
   cursor: pointer;
+  color: #000;
 }
 
-.chooseBtn:hover {
+.chooseFile:hover {
   background-color: #FF5F6D;
 }
 
-footer {
-  text-align: center;
-  font-family: montserrat;
-  font-size: 1.2rem;
-  opacity: 0.7;
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.imageGrid img {
+  width: 100%;
 }

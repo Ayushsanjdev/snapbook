@@ -1,7 +1,18 @@
+import React, { useState } from 'react';
 import './App.css';
 import ImageUploader from './components/imageUploader'
+import AllImages from './components/allImages';
 
-function App() {
+const App = () => {
+
+  const [snap, setSnap] = useState(null);
+
+  const addSnapHandler = (e) => {
+    console.log(e.target.value);
+  }
+
+
+
   return (
     <div className="App">
       <header>
@@ -16,10 +27,12 @@ function App() {
           width="50px" />
         </button>
       </header>
-      <ImageUploader />
-      <footer>
-        <h3>After Uploading, You will be redirected to Snapbook</h3>
-      </footer>
+      <button className="addBtn" onClick={addSnapHandler}>Add Snap</button>
+      <ImageUploader
+        snap={snap}
+        setSnap={setSnap} />
+      <AllImages
+        snap={snap} />
     </div>
   );
 }
