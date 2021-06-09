@@ -1,13 +1,12 @@
 import React from 'react';
+import { storage } from '../firebaseConfig';
 
-const ImageUploader = ({snap, setSnap}) => {
+const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
 
-  const handleChange = (e) => {
-    e.target.files ? 
-    setSnap({
+  const addSnapHandler = (e) => {
+      setSnap({
       image: URL.createObjectURL(e.target.files[0])
-    }) 
-    : console.log("something broke");
+    })
   }
 
 
@@ -17,8 +16,7 @@ const ImageUploader = ({snap, setSnap}) => {
         <small>file should be in jpeg/png/img format</small>
 
         <div className="dropZone">
-          <img 
-            style={{opacity: '0.6'}} 
+          <img  
             src={snap !== null ? snap.image 
             : "https://img.icons8.com/plasticine/250/000000/image.png"} alt="drop your img here" 
             className="uploadImage" />
@@ -29,15 +27,16 @@ const ImageUploader = ({snap, setSnap}) => {
         </div>
 
         <small>or</small>
-        <br/><br/>
-
+        <br/>
+        <br/>
+        
         <label htmlFor="files" className="chooseFile">
         <input 
            id="files" type="file" accept=" image/* "
-           onChange={handleChange} />
+           onChange={addSnapHandler} />
         Choose local Snap</label>
         <br/>
-        <button className={snap !== null ? "uploadBtn" : "hideView"}>Upload Snap</button>
+        <button className={snap !== null ? "uploadBtn" : "hideView" } onClick={uploadHander} >Upload Snap</button>
       </div>
   )
 }

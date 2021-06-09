@@ -6,12 +6,7 @@ import AllImages from './components/allImages';
 const App = () => {
 
   const [snap, setSnap] = useState(null);
-
-  const addSnapUploader = (e) => {
-    console.log(e.target.className);
-  }
-
-
+  const [inProgress, setInProgress] = useState(0);
 
   return (
     <div className="App">
@@ -27,10 +22,13 @@ const App = () => {
           width="50px" />
         </button>
       </header>
-      <button className="addBtn" onClick={addSnapUploader}>Add Snap</button>
+      <button className="addBtn">Add Snap</button>
       <ImageUploader
         snap={snap}
-        setSnap={setSnap} />
+        setSnap={setSnap}
+        inProgress={inProgress}n
+        setInProgress={setInProgress} />
+        
       <AllImages
         snap={snap} />
     </div>
