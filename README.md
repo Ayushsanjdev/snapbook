@@ -8,6 +8,7 @@ Uses:
 * U can add and delete the photos(feature)
 * U can drag and drop pictures also
 * will be using material theme for styling and typography
+* Checkout the flowchart above
 
 Hope u will like this app.
 U can also fork and suggest some addition by doing pull request.

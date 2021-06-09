@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Montserrat&family=Stint+Ultra+Condensed&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FF5F6D;  
+  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  
+  background: linear-gradient(to right, #FFC371, #FF5F6D);
+}
+
+.App {
+  max-width: 85vw;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: 'Odibee Sans', cursive;
+  color: #312f2f;
+  font-size: 3rem;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.githubBtn {
+  background: transparent;
+  border: None;
+  cursor: pointer;
+}
+
+.addBtn {
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: montserrat;
+  background-color: #FF5F6D;
+  border: transparent;
+  border-radius: 5px;
+  color: white;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: #FFC371;
+  color: #000;
+}
+
+.hideView {
+  display: none;
+}
+
+.uploadImage {
+  max-width: 100%;
+}
+
+.popupDiv {
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  text-align: center;
+  padding: 2rem;
+  margin: 3rem auto;
+  font-family: montserrat;
+  color: rgb(247, 247, 247);
+  background-color: #312f2f;
+}
+
+.popupDiv p {
+  padding: 1rem;
+  font-size: larger;
+}
+
+.dropZone {
+  border: 2px dashed #f6f8fb5b;
+  margin: 1rem 1.5rem;
+  padding: 1rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.chooseFile {
+  padding: 0.5rem;
+  background-color: #FFC371;
+  border: transparent;
+  border-radius: 5px;
+  font-family: montserrat;
+  cursor: pointer;
+  color: #000;
+}
+
+.chooseFile:hover {
+  background-color: #FF5F6D;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.imageGrid img {
+  width: 100%;
+}
+
+.uploadBtn {
+  padding: 0.5rem;
+  margin-top: 2rem;
+  font-family: montserrat;
+  border-radius: 5px;
+  background-color: #FF5F6D;
+  border: transparent;
+  cursor: pointer;
+}
