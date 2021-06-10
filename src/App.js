@@ -6,7 +6,6 @@ import AllImages from './components/allImages';
 const App = () => {
 
   const [snap, setSnap] = useState(null);
-  const [error, setError] = useState(null);
   const [inProgress, setInProgress] = useState(0);
 
   return (
@@ -24,11 +23,14 @@ const App = () => {
         </button>
       </header>
       <button className="addBtn">Add Snap</button>
+      
       <ImageUploader
         snap={snap}
         setSnap={setSnap}
         inProgress={inProgress}
         setInProgress={setInProgress} />
+
+      {}
       <AllImages
         snap={snap} />
     </div>
