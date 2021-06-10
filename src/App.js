@@ -6,15 +6,16 @@ import AllImages from './components/allImages';
 const App = () => {
 
   const [snap, setSnap] = useState(null);
+  const [error, setError] = useState(null);
   const [inProgress, setInProgress] = useState(0);
 
   return (
     <div className="App">
       <header>
       <img 
-          src="https://img.icons8.com/dusk/50/000000/instagram-new.png" 
-          alt="snapbook logo"/>
-        <h1>Snapbook</h1>
+        src="https://img.icons8.com/dusk/50/000000/instagram-new.png" 
+        alt="snapbook logo"/>
+      <h1>Snapbook</h1>
       <button className="githubBtn">
         <img 
           src="https://img.icons8.com/nolan/64/github.png" 
@@ -26,9 +27,8 @@ const App = () => {
       <ImageUploader
         snap={snap}
         setSnap={setSnap}
-        inProgress={inProgress}n
+        inProgress={inProgress}
         setInProgress={setInProgress} />
-        
       <AllImages
         snap={snap} />
     </div>

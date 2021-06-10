@@ -4,9 +4,11 @@ import { storage } from '../firebaseConfig';
 const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
 
   const addSnapHandler = (e) => {
-      setSnap({
-      image: URL.createObjectURL(e.target.files[0])
-    })
+    setSnap(e.target.files[0]);
+  }
+
+  const uploadHandler = () => {
+    
   }
 
 
@@ -17,7 +19,7 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
 
         <div className="dropZone">
           <img  
-            src={snap !== null ? snap.image 
+            src={snap !== null ? snap 
             : "https://img.icons8.com/plasticine/250/000000/image.png"} alt="drop your img here" 
             className="uploadImage" />
           <br/>
@@ -36,7 +38,7 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
            onChange={addSnapHandler} />
         Choose local Snap</label>
         <br/>
-        <button className={snap !== null ? "uploadBtn" : "hideView" } onClick={uploadHander} >Upload Snap</button>
+        <button className={snap !== null ? "uploadBtn" : "hideView" } onClick={uploadHandler} >Upload Snap</button>
       </div>
   )
 }
