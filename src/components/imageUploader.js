@@ -1,5 +1,6 @@
 import React from 'react';
 import UploadToStorage from '../firebaseBaas/StorageService';
+// import { motion } from 'framer-motion';
 
 const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
 
@@ -7,19 +8,16 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
     setSnap(URL.createObjectURL(e.target.files[0]));
   }
 
-
   return(
     <section>
-      <h2>Add your first Snap to Snapbook</h2>
-      <button className="addBtn">Add Snap</button>
       <div className="popupDiv">
         <p>Upload Your Snap to snapbook</p>
         <small>file should be in jpeg/png/img format</small>
-
+        
         <div className="dropZone">
           <img  
-            src={snap !== null ? snap 
-            : "https://img.icons8.com/plasticine/250/000000/image.png"} 
+            src={snap !== null ? snap : 
+            "https://img.icons8.com/plasticine/250/000000/image.png"} 
             alt="drop your img here" 
             className="uploadImage" />
           <br/>
@@ -38,8 +36,8 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
         <UploadToStorage
           snap={snap} />
         </div>
-      </section>
-  )
+        </section>
+      )
 }
 
 export default ImageUploader;
