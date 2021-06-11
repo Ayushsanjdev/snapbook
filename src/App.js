@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import ImageUploader from './components/imageUploader'
-import AllImages from './components/allImages';
+import Entry from './components/AppEntry';
+// import AllImages from './components/allImages';
 
 const App = () => {
 
@@ -10,29 +10,18 @@ const App = () => {
 
   return (
     <div className="App">
-      <header>
-      <img 
-        src="https://img.icons8.com/dusk/50/000000/instagram-new.png" 
-        alt="snapbook logo"/>
-      <h1>Snapbook</h1>
-      <button className="githubBtn">
-        <img 
-          src="https://img.icons8.com/nolan/64/github.png" 
-          alt="go to github"
-          width="50px" />
-        </button>
-      </header>
-      <button className="addBtn">Add Snap</button>
-      
-      <ImageUploader
+      <Entry
         snap={snap}
-        setSnap={setSnap}
-        inProgress={inProgress}
-        setInProgress={setInProgress} />
-      
-      {/* {if I upload the photo then only show the pictures} */}
-      <AllImages
-        snap={snap} />
+        setSnap={setSnap} />
+    
+      {/* {if I upload the photo then only show all the pictures} */}
+      {/* <AllImages
+        snap={snap} /> */}
+        
+      <footer>
+        Made with 💖 by <a href="https://github.com/ayushsanjdev" style={{color: 'black'}}>ayushsanjdev</a>
+      </footer>
+
     </div>
   );
 }

@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: 1px dotted black; */ 
+  /* above code is used for debuggin the layout */
 }
 
 body {
@@ -19,17 +21,32 @@ body {
 }
 
 header {
+  max-width: 769px;
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+header img, .githubBtn img {
+  max-width: 30px;
 }
 
 h1 {
   font-family: 'Odibee Sans', cursive;
   color: #312f2f;
-  font-size: 3rem;
+  font-size: 2rem;
   letter-spacing: 0.01em;
   text-align: center;
+}
+
+h2 {
+  font-family: montserrat;
+  margin-top: 1.5rem;
+}
+
+section{
+  padding: 5rem 0rem;
 }
 
 .githubBtn {
@@ -64,7 +81,8 @@ h1 {
 }
 
 .popupDiv {
-  max-width: 450px;
+  display: none;
+  max-width: 350px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
@@ -79,14 +97,14 @@ h1 {
 }
 
 .popupDiv p {
-  padding: 1rem;
-  font-size: larger;
+  font-size: large;
+  padding-bottom: 5px;
 }
 
 .dropZone {
   border: 2px dashed #f6f8fb5b;
-  margin: 1rem 1.5rem;
-  padding: 1rem;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 
 input[type="file"] {
@@ -109,7 +127,7 @@ input[type="file"] {
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .imageGrid img {
@@ -118,10 +136,31 @@ input[type="file"] {
 
 .uploadBtn {
   padding: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   font-family: montserrat;
   border-radius: 5px;
   background-color: #FF5F6D;
   border: transparent;
   cursor: pointer;
+}
+
+figure {
+  margin-top: 3rem;
+  max-width: 100%;
+  
+}
+
+figure img {
+  max-width: 100%;
+  box-shadow: 0 0 100px rgb(255, 241, 47);
+}
+
+footer {
+  position: fixed;
+  padding: 0.5rem;
+  font-family: montserrat;
+  font-size: x-small;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
