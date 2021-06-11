@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { storage } from '../firebaseConfig';
+import { storage } from '../firebaseBaas/firebaseConfig';
 
 const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
 
@@ -12,8 +12,7 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
   }
 
   const uploadHandler = (snap) => {
-    let file = URL.createObjectURL(snap);
-    storage.ref(file).then((snapshot) => {
+    storage.ref(snap).then((snapshot) => {
       console.log("uploaded a blob or file!");
     })
   }
@@ -27,7 +26,8 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
       <div className="dropZone">
         <img  
           src={snap !== null ? snap 
-          : "https://img.icons8.com/plasticine/250/000000/image.png"} alt="drop your img here" 
+          : "https://img.icons8.com/plasticine/250/000000/image.png"} 
+          alt="drop your img here" 
           className="uploadImage" />
         <br/>
           {snap === null ? 
@@ -40,10 +40,11 @@ const ImageUploader = ({snap, setSnap, inProgress, setInProgress}) => {
       <br/>
       
       <label htmlFor="files" className="chooseFile">
-      <input 
-        id="files" type="file" accept=" image/* "
-        onChange={addSnapHandler} />
-      Choose local Snap</label>
+        <input 
+          id="files" type="file" accept=" image/* "
+          onChange={addSnapHandler} />
+          Choose local Snap
+      </label>
       <br/>
       <button 
         className={snap !== null ? "uploadBtn" : "hideView" } onClick={uploadHandler} >Upload Snap</button>

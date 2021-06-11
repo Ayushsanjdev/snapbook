@@ -29,8 +29,8 @@ const App = () => {
         setSnap={setSnap}
         inProgress={inProgress}
         setInProgress={setInProgress} />
-
-      {}
+      
+      {/* {if I upload the photo then only show the pictures} */}
       <AllImages
         snap={snap} />
     </div>
