@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import ImageUploader from './imageUploader';
 
-const Entry = ({snap, setSnap}) => {
+const Entry = ({snap,setSnap}) => {
 
-  const [popup, setPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-  const addPopup = () => {
-    return setPopup(
-      <ImageUploader
-        snap={snap}
-        setSnap={setSnap} />
-    )
+  const toggleShowPopup  = () => {
+    setShowPopup(true);
+  }
+
+  const toggleHidePopup = () => {
+    setShowPopup(false);
+    setSnap(null);
   }
 
   return (
@@ -24,8 +25,14 @@ const Entry = ({snap, setSnap}) => {
         <h2>Add your first Snap to Snapbook</h2>
         <button 
           className="addBtn"
-          onClick={addPopup}>Add Snap</button>
+          onClick={toggleShowPopup}>Add Snap</button>
       </div>
+
+      <ImageUploader
+        snap={snap}
+        setSnap={setSnap}
+        showPopup={showPopup}
+        toggleHidePopup={toggleHidePopup} />
       
     </div>
   )

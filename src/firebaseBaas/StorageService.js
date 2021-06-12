@@ -1,15 +1,10 @@
 import React from 'react';
-// import { storage } from '../firebaseBaas/firebaseConfig';
+import { storage } from '../firebaseBaas/firebaseConfig';
 
-const UploadToStorage = ({snap}) => {
-  return (
-    <div>
-      <button 
-        className={snap !== null ? "uploadBtn" : "hideView"}>
-        Upload Snap
-      </button>
-    </div>
+const storageService = () => {
+  return(
+    <div></div>
   )
 }
 
-export default UploadToStorage;
+export default storageService;

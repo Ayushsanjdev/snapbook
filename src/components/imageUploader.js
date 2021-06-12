@@ -1,21 +1,24 @@
 import React from 'react';
-import UploadToStorage from '../firebaseBaas/StorageService';
 import { motion } from 'framer-motion';
 
-const ImageUploader = ({snap, setSnap}) => {
+const ImageUploader = ({snap, setSnap, showPopup, toggleHidePopup }) => {
 
   const addSnapHandler = (e) => {
     setSnap(URL.createObjectURL(e.target.files[0]));
   }
 
-  return(
+  return (
+    showPopup === true ? 
     <section>
       <motion.div
         animate={{rotate: 360, scale: 1.1}}>
 
         <div className="popupDiv">
+          <button className="closeBtn" onClick={toggleHidePopup}>❌</button>
           <p>Upload Your Snap to snapbook</p>
-          <small style={{fontSize: '0.7rem'}}>file should be in jpeg/png/img format</small>
+          <small style={{fontSize: '0.7rem'}}>
+            file should be in jpeg/png/img format
+          </small>
           
           <div className="dropZone">
             <img  
@@ -35,12 +38,14 @@ const ImageUploader = ({snap, setSnap}) => {
               onChange={addSnapHandler} />
               Choose local Snap
           </label>
-          
-          <UploadToStorage
-            snap={snap} />
-          </div>
-        </motion.div>
-      </section>
+            <button 
+              className={snap !== null ? "uploadBtn" : "hideView"}>
+                Upload Snap
+            </button>
+        </div>
+      </motion.div>
+    </section>
+    : ''
       )
 }
 

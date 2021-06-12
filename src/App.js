@@ -10,6 +10,7 @@ const App = () => {
 
   return (
     <div className="App">
+
       <Entry
         snap={snap}
         setSnap={setSnap} />
