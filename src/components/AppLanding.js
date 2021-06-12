@@ -32,6 +32,7 @@ const Entry = ({snap,setSnap}) => {
         snap={snap}
         setSnap={setSnap}
         showPopup={showPopup}
+        setShowPopup={setShowPopup}
         toggleHidePopup={toggleHidePopup} />
       
     </div>

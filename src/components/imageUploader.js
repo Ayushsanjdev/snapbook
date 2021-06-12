@@ -1,17 +1,23 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const ImageUploader = ({snap, setSnap, showPopup, toggleHidePopup }) => {
+const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup }) => {
 
   const addSnapHandler = (e) => {
     setSnap(URL.createObjectURL(e.target.files[0]));
+  }
+
+  const uploadHandler = () => {
+    console.log("update the code to upload!!");
+    // setSnap(null);
+    // setShowPopup(false);
   }
 
   return (
     showPopup === true ? 
     <section>
       <motion.div
-        animate={{rotate: 360, scale: 1.1}}>
+        animate={{ scale: 1.1 }}>
 
         <div className="popupDiv">
           <button className="closeBtn" onClick={toggleHidePopup}>❌</button>
@@ -39,6 +45,7 @@ const ImageUploader = ({snap, setSnap, showPopup, toggleHidePopup }) => {
               Choose local Snap
           </label>
             <button 
+              onClick={uploadHandler}
               className={snap !== null ? "uploadBtn" : "hideView"}>
                 Upload Snap
             </button>

@@ -1,4 +1,4 @@
-import {firestoreStorage} from './firebaseConfig';
+import { firestoreStorage } from './firebaseConfig';
 
 const firestoreService = () => {
   
