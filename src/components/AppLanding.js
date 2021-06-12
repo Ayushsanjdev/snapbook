@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ImageUploader from './imageUploader';
 
 const Entry = ({snap, setSnap}) => {
+
+  const [popup, setPopup] = useState(false);
+
+  const addPopup = () => {
+    return setPopup(
+      <ImageUploader
+        snap={snap}
+        setSnap={setSnap} />
+    )
+  }
+
   return (
     <div>
 
@@ -11,13 +22,10 @@ const Entry = ({snap, setSnap}) => {
 
       <div className="addSnapArea">
         <h2>Add your first Snap to Snapbook</h2>
-        <button className="addBtn">Add Snap</button>
+        <button 
+          className="addBtn"
+          onClick={addPopup}>Add Snap</button>
       </div>
-      
-      
-      <ImageUploader
-        snap={snap}
-        setSnap={setSnap} />
       
     </div>
   )
