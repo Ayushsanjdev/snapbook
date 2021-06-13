@@ -15,8 +15,8 @@ const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup 
         animate={{ scale: 1.1 }}>
 
         <div className="popupDiv">
-          <button className={InprogressBar === null ? "closeBtn" : "hideView"} onClick={toggleHidePopup}>❌</button>
-          
+          <button className={snap === null ? "closeBtn" : "hideView"} onClick={toggleHidePopup}>❌</button>
+
           <p>Upload Your Snap to snapbook</p>
           <small style={{fontSize: '0.7rem'}}>
             file should be in jpeg/png/img format

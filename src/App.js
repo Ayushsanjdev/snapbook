@@ -22,9 +22,8 @@ const App = () => {
         setSnap={setSnap}
         selectedImg={selectedImg}
         setSelectedImg={setSelectedImg} >
-          {selectedImg && (
-            <img src={selectedImg} alt={selectedImg.name} />
-          )}
+          {selectedImg 
+          && (<img src={selectedImg} alt={selectedImg.name} />)}
       </AllImages>
 
       <footer>

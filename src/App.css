@@ -151,9 +151,7 @@ input[type="file"] {
 
 .imageGrid img {
   width: 100%;
-  height: 100% ;
   border-radius: 5px;
-
 }
 
 .imageWrap {
@@ -170,18 +168,13 @@ input[type="file"] {
 }
 
 figure {
-  margin-top: 3rem;
-  max-width: 100%;
+  margin-top: 1.5rem;
 }
 
 figure img {
   max-width: 100%;
   box-shadow: 0 0 100px rgb(255, 241, 47);
   border-radius: 5px;
-}
-
-.addSnapArea, figure {
-  height: 100%;
 }
 
 footer {

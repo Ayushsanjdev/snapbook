@@ -16,8 +16,6 @@ const Entry = ({snap,setSnap}) => {
   return (
     <div>
 
-      {showPopup === false ?
-      <>
       <figure>
         <img src="https://i.ibb.co/6nCZ7RV/Snapbook.png" alt="snapbook banner" />
       </figure>
@@ -28,8 +26,6 @@ const Entry = ({snap,setSnap}) => {
           className="addBtn"
           onClick={toggleShowPopup}>Start</button>
       </div>
-      </>
-      : ''}
 
       <ImageUploader
         snap={snap}
