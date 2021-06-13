@@ -14,7 +14,7 @@ const App = () => {
         setSnap={setSnap} />
 
       <footer>
-        Made with 💖 by <a href="%SRC_URL%/snapbook.png" style={{color: 'black'}}>ayushsanjdev</a>
+        Made with 💖 by <a href="https//github.com/ayushsanjdev" style={{color: 'black'}}>ayushsanjdev</a>
       </footer>
 
     </div>

@@ -137,6 +137,11 @@ input[type="file"] {
   cursor: pointer;
 }
 
+.progressBar {
+  height: 5px;
+  background-color: #FF5F6D;
+  padding: 10px;
+}
 
 .imageGrid {
   display: grid;

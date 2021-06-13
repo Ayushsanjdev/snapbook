@@ -1,16 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import InprogressBar from './Inprogressbar';
 
 const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup }) => {
+  
+  const [error, setError] = useState(null);
 
   const addSnapHandler = (e) => {
     setSnap(URL.createObjectURL(e.target.files[0]));
-  }
-
-  const uploadHandler = () => {
-    console.log("update the code to upload!!");
-    // setSnap(null);
-    // setShowPopup(false);
   }
 
   return (
@@ -44,11 +41,17 @@ const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup 
               onChange={addSnapHandler} />
               Choose local Snap
           </label>
-            <button 
-              onClick={uploadHandler}
-              className={snap !== null ? "uploadBtn" : "hideView"}>
-                Upload Snap
-            </button>
+
+          {snap !== null ?
+          <InprogressBar
+            snap={snap}
+            setSnap={setSnap} />
+            : ''}
+
+          {/* <button
+            className={snap !== null ? "uploadBtn" : "hideView"}>
+              uploading...
+          </button> */}
         </div>
       </motion.div>
     </section>
