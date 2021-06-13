@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import InprogressBar from './Inprogressbar';
 
 const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup }) => {
-  
-  const [error, setError] = useState(null);
 
   const addSnapHandler = (e) => {
-    setSnap(URL.createObjectURL(e.target.files[0]));
+    setSnap(e.target.files[0]);
   }
 
   return (
@@ -17,7 +15,7 @@ const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup 
         animate={{ scale: 1.1 }}>
 
         <div className="popupDiv">
-          <button className="closeBtn" onClick={toggleHidePopup}>❌</button>
+          <button className={InprogressBar === null ? "closeBtn" : "hideView"} onClick={toggleHidePopup}>❌</button>
           <p>Upload Your Snap to snapbook</p>
           <small style={{fontSize: '0.7rem'}}>
             file should be in jpeg/png/img format
@@ -25,7 +23,7 @@ const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup 
           
           <div className="dropZone">
             <img  
-              src={snap !== null ? snap : 
+              src={snap !== null ? URL.createObjectURL(snap) : 
               "https://img.icons8.com/plasticine/250/000000/image.png"} 
               alt="drop your img here" 
               className="uploadImage" />
@@ -42,16 +40,18 @@ const ImageUploader = ({snap, setSnap, showPopup, setShowPopup, toggleHidePopup 
               Choose local Snap
           </label>
 
+          <p
+            className={snap !== null ? "uploadBtn" : "hideView"}>
+            uploading...
+          </p>
+
           {snap !== null ?
           <InprogressBar
             snap={snap}
-            setSnap={setSnap} />
+            setSnap={setSnap}
+            setShowPopup={setShowPopup} />
             : ''}
-
-          {/* <button
-            className={snap !== null ? "uploadBtn" : "hideView"}>
-              uploading...
-          </button> */}
+          
         </div>
       </motion.div>
     </section>

@@ -138,9 +138,9 @@ input[type="file"] {
 }
 
 .progressBar {
-  height: 5px;
+  height: 10px;
   background-color: #FF5F6D;
-  padding: 10px;
+  margin-top: 15px;
 }
 
 .imageGrid {
@@ -153,11 +153,10 @@ input[type="file"] {
 }
 
 .uploadBtn {
-  padding: 0.5rem;
   margin-top: 1rem;
   font-family: montserrat;
   border-radius: 5px;
-  background-color: #FF5F6D;
+  font-size: xx-small;
   border: transparent;
   cursor: pointer;
 }
