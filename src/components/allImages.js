@@ -7,6 +7,7 @@ const AllImages = ({setSelectedImg}) => {
   const { docs } = useFirestoreService("allImages");
 
   return(
+    
     <div className="imageGrid">
       {docs &&
         docs.map((doc) => (

@@ -5,11 +5,10 @@ import Entry from './components/AppLanding';
 
 const App = () => {
 
+  const [showState, setShowState] = useState(false);
   const [snap, setSnap] = useState(null);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  // 1.Initial state of the app will be applanding.js
-  // 2.
 
   return (
     <div className="App">
@@ -22,7 +21,7 @@ const App = () => {
         snap={snap}
         setSnap={setSnap}
         selectedImg={selectedImg}
-        setSelectedImg={setSelectedImg}>
+        setSelectedImg={setSelectedImg} >
           {selectedImg && (
             <img src={selectedImg} alt={selectedImg.name} />
           )}
