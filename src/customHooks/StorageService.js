@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { projectFirestore, projectStorage, timestamp } from '../firebaseConfig';
+import { projectFirestore, projectStorage, timestamp } from '../firebaseConfig/firebaseConfig';
 
 //creating a custom hook with passing file as an argument
 

@@ -11,7 +11,6 @@ const Entry = ({snap,setSnap}) => {
 
   const toggleHidePopup = () => {
     setShowPopup(false);
-    setSnap(null);
   }
 
   return (

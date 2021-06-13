@@ -2,7 +2,7 @@ import React from "react";
 import useFirestoreService from "../customHooks/firestoreService";
 import { motion } from "framer-motion";
 
-const AllImages = ({snap, selectedImg, setSelectedImg}) => {
+const AllImages = ({setSelectedImg}) => {
 
   const { docs } = useFirestoreService("allImages");
 
@@ -16,12 +16,13 @@ const AllImages = ({snap, selectedImg, setSelectedImg}) => {
             layout
             whileHover={{opacity: 1}}
             onClick={() => setSelectedImg(doc.url)}>
+            
             <motion.img 
               src={doc.url}
-              alt="uploaded pic"
+              alt="snaps"
               initial={{opacity: 0}}
               animate={{opacity: 1}}
-              transition={{delay: 1}} />
+              transition={{delay: 0.5}} />
             </motion.div> 
         ))} 
     </div>
