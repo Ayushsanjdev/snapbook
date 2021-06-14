@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ImageUploader from './imageUploader';
+import AllImages from './allImages';
 
 const Entry = ({snap,setSnap}) => {
 
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedImg, setSelectedImg] = useState(null);
+  const [showImg, setShowImg] = useState(false);
+  const [showEntry, setshowEntry] = useState(false);
 
   const toggleShowPopup  = () => {
     setShowPopup(true);
@@ -33,6 +37,16 @@ const Entry = ({snap,setSnap}) => {
         showPopup={showPopup}
         setShowPopup={setShowPopup}
         toggleHidePopup={toggleHidePopup} />
+
+      
+      <AllImages
+        snap={snap}
+        setSnap={setSnap}
+        selectedImg={selectedImg}
+        setSelectedImg={setSelectedImg} >
+          {selectedImg 
+          && (<img src={selectedImg} alt={selectedImg.name} />)}
+      </AllImages>
       
     </div>
   )
