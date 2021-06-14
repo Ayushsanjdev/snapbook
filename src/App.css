@@ -1,22 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Montserrat&family=Stint+Ultra+Condensed&&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&family=Montserrat&family=Stint+Ultra+Condensed&&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* border: 1px dotted black; */ 
+  /* border: 1px dotted black; */
   /* above code is used for debuggin the layout */
 }
 
 body {
-  background: #FF5F6D;  
-  background: -webkit-linear-gradient(to right, #FFC371, #FF5F6D);  
-  background: linear-gradient(to right, #FFC371, #FF5F6D);
+  background: #ff5f6d;
+  background: -webkit-linear-gradient(to right, #ffc371, #ff5f6d);
+  background: linear-gradient(to right, #ffc371, #ff5f6d);
 }
 
 .App {
   max-width: 90vw;
-  margin: 0 auto; 
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -28,12 +28,13 @@ header {
   margin: 0 auto;
 }
 
-header img, .githubBtn img {
+header img,
+.githubBtn img {
   max-width: 30px;
 }
 
 h1 {
-  font-family: 'Odibee Sans', cursive;
+  font-family: "Odibee Sans", cursive;
   color: #312f2f;
   font-size: 2rem;
   letter-spacing: 0.01em;
@@ -50,7 +51,7 @@ h1 {
   padding: 0.8rem;
   font-size: 1rem;
   font-family: montserrat;
-  background-color: #FF5F6D;
+  background-color: #ff5f6d;
   border: transparent;
   border-radius: 5px;
   color: white;
@@ -66,7 +67,7 @@ h1 {
 }
 
 .addBtn:hover {
-  background-color: #FFC371;
+  background-color: #ffc371;
   color: #000;
 }
 
@@ -79,8 +80,6 @@ h1 {
 }
 
 section {
-  display: grid;
-  place-items: center;
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -92,9 +91,9 @@ section {
 .popupDiv {
   max-width: 300px;
   border-radius: 20px;
-  box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-  -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.75);
   text-align: center;
   margin: 0 auto;
   padding: 1.5rem;
@@ -120,7 +119,7 @@ input[type="file"] {
 
 .chooseFile {
   padding: 0.5rem;
-  background-color: #FFC371;
+  background-color: #ffc371;
   border: transparent;
   border-radius: 5px;
   font-family: montserrat;
@@ -129,7 +128,7 @@ input[type="file"] {
 }
 
 .chooseFile:hover {
-  background-color: #FF5F6D;
+  background-color: #ff5f6d;
 }
 
 .closeBtn {
@@ -139,19 +138,22 @@ input[type="file"] {
 
 .progressBar {
   height: 10px;
-  background-color: #FF5F6D;
+  background-color: #ff5f6d;
   margin-top: 15px;
 }
 
 .imageGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(4, auto);
+  gap: 0.2rem;
+  padding-top: 1rem;
 }
 
 .imageGrid img {
   width: 100%;
+  height: 100%;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .imageWrap {
@@ -175,6 +177,25 @@ figure img {
   max-width: 100%;
   box-shadow: 0 0 100px rgb(255, 241, 47);
   border-radius: 5px;
+}
+
+.snapbookBtn {
+  background-color: rgba(7, 7, 7, 0.822);
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
+  font-size: large;
+}
+
+.addMoreBtn {
+  background-color: #ffc371;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: transparent;
+  cursor: pointer;
 }
 
 footer {
