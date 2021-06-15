@@ -10,6 +10,7 @@ const Entry = ({ snap, setSnap }) => {
   const toggleShowPopup = () => {
     setShowPopup(true);
     setShowSnapbook(true);
+    setSnap(null);
   };
 
   const toggleHidePopup = () => {
