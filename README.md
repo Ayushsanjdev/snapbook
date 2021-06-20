@@ -6,7 +6,7 @@ Uses:
 * U can use it to save ur pictures online and forget the pain of suddenly deleting the pictures in ur phone..
 * This app will save ur photos in firestore(database).
 * U can add and delete the photos(feature)
-* U can drag and drop pictures also
+* U can drag and drop pictures also(upcoming)
 * will be using material theme for styling and typography
 * Checkout the flowchart above
 
